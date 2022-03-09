@@ -5578,8 +5578,8 @@ var entry, js, css;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "layout.svelte-dc784ad1.js";
-    js = ["layout.svelte-dc784ad1.js", "chunks/vendor-0af294cd.js"];
+    entry = "layout.svelte-4b69661c.js";
+    js = ["layout.svelte-4b69661c.js", "chunks/vendor-f0aad510.js"];
     css = [];
   }
 });
@@ -5628,8 +5628,8 @@ var entry2, js2, css2;
 var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     init_error_svelte();
-    entry2 = "error.svelte-843355e6.js";
-    js2 = ["error.svelte-843355e6.js", "chunks/vendor-0af294cd.js"];
+    entry2 = "error.svelte-72e6fcf6.js";
+    js2 = ["error.svelte-72e6fcf6.js", "chunks/vendor-f0aad510.js"];
     css2 = [];
   }
 });
@@ -7221,6 +7221,18 @@ var init_index_esm20173 = __esm({
       }
     };
     registerCoreComponents("");
+  }
+});
+
+// node_modules/firebase/app/dist/index.mjs
+var name2, version2;
+var init_dist = __esm({
+  "node_modules/firebase/app/dist/index.mjs"() {
+    init_index_esm20173();
+    init_index_esm20173();
+    name2 = "firebase";
+    version2 = "9.6.8";
+    registerVersion(name2, version2, "app");
   }
 });
 
@@ -11060,8 +11072,8 @@ function registerAuth(clientPlatform) {
     const auth = _castAuth(container.getProvider("auth").getImmediate());
     return ((auth2) => new AuthInterop(auth2))(auth);
   }, "PRIVATE").setInstantiationMode("EXPLICIT"));
-  registerVersion(name2, version2, getVersionForPlatform(clientPlatform));
-  registerVersion(name2, version2, "esm2017");
+  registerVersion(name3, version3, getVersionForPlatform(clientPlatform));
+  registerVersion(name3, version3, "esm2017");
 }
 function getAuth(app = getApp()) {
   const provider = _getProvider(app, "auth");
@@ -11070,7 +11082,7 @@ function getAuth(app = getApp()) {
   }
   return initializeAuth(app);
 }
-var fetchImpl, prodErrorMap, _DEFAULT_AUTH_ERROR_FACTORY, logClient, instanceCache, Delay, FetchProvider, SERVER_ERROR_MAP, DEFAULT_API_TIMEOUT_MS, NetworkTimeout, ProactiveRefresh, UserMetadata, StsTokenManager, UserImpl, InMemoryPersistence, inMemoryPersistence, PersistenceUserManager, AuthImpl, Subscription, AuthCredential, EmailAuthCredential, IDP_REQUEST_URI$1, OAuthCredential, VERIFY_PHONE_NUMBER_FOR_EXISTING_ERROR_MAP_, ActionCodeURL, EmailAuthProvider, FederatedAuthProvider, BaseOAuthProvider, FacebookAuthProvider, GoogleAuthProvider, GithubAuthProvider, TwitterAuthProvider, name2, version2, AuthInterop, NOT_AVAILABLE_ERROR;
+var fetchImpl, prodErrorMap, _DEFAULT_AUTH_ERROR_FACTORY, logClient, instanceCache, Delay, FetchProvider, SERVER_ERROR_MAP, DEFAULT_API_TIMEOUT_MS, NetworkTimeout, ProactiveRefresh, UserMetadata, StsTokenManager, UserImpl, InMemoryPersistence, inMemoryPersistence, PersistenceUserManager, AuthImpl, Subscription, AuthCredential, EmailAuthCredential, IDP_REQUEST_URI$1, OAuthCredential, VERIFY_PHONE_NUMBER_FOR_EXISTING_ERROR_MAP_, ActionCodeURL, EmailAuthProvider, FederatedAuthProvider, BaseOAuthProvider, FacebookAuthProvider, GoogleAuthProvider, GithubAuthProvider, TwitterAuthProvider, name3, version3, AuthInterop, NOT_AVAILABLE_ERROR;
 var init_index_89c9d3da = __esm({
   "node_modules/@firebase/auth/dist/node-esm/index-89c9d3da.js"() {
     init_index_node_esm();
@@ -12340,8 +12352,8 @@ var init_index_89c9d3da = __esm({
     };
     TwitterAuthProvider.TWITTER_SIGN_IN_METHOD = "twitter.com";
     TwitterAuthProvider.PROVIDER_ID = "twitter.com";
-    name2 = "@firebase/auth";
-    version2 = "0.19.9";
+    name3 = "@firebase/auth";
+    version3 = "0.19.9";
     AuthInterop = class {
       constructor(auth) {
         this.auth = auth;
@@ -12417,21 +12429,9 @@ var init_node_esm = __esm({
 });
 
 // node_modules/firebase/auth/dist/index.mjs
-var init_dist = __esm({
+var init_dist2 = __esm({
   "node_modules/firebase/auth/dist/index.mjs"() {
     init_node_esm();
-  }
-});
-
-// node_modules/firebase/app/dist/index.mjs
-var name3, version3;
-var init_dist2 = __esm({
-  "node_modules/firebase/app/dist/index.mjs"() {
-    init_index_esm20173();
-    init_index_esm20173();
-    name3 = "firebase";
-    version3 = "9.6.8";
-    registerVersion(name3, version3, "app");
   }
 });
 
@@ -38281,8 +38281,8 @@ var init_dist3 = __esm({
 var firebaseConfig, db;
 var init_firebase_f1440d22 = __esm({
   ".svelte-kit/output/server/chunks/firebase-f1440d22.js"() {
-    init_dist2();
     init_dist();
+    init_dist2();
     init_dist3();
     firebaseConfig = {
       apiKey: "AIzaSyBfz3WZEFo2m8Nw2mX6zfObbOkY4EjD5NM",
@@ -38308,9 +38308,9 @@ var Auth, Routes;
 var init_index_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/index.svelte.js"() {
     init_index_047fd6a4();
-    init_dist();
     init_firebase_f1440d22();
     init_dist2();
+    init_dist();
     init_dist3();
     Auth = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       createEventDispatcher();
@@ -38366,8 +38366,8 @@ var entry3, js3, css3;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-ac9d0a30.js";
-    js3 = ["pages/index.svelte-ac9d0a30.js", "chunks/vendor-0af294cd.js", "chunks/firebase-3ad6a565.js", "chunks/singletons-d1fb5791.js"];
+    entry3 = "pages/index.svelte-24463b12.js";
+    js3 = ["pages/index.svelte-24463b12.js", "chunks/vendor-f0aad510.js", "chunks/navigation-416f1912.js", "chunks/singletons-d1fb5791.js"];
     css3 = [];
   }
 });
@@ -38918,10 +38918,10 @@ var init_chat_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/chat.svelte.js"() {
     init_index_047fd6a4();
     init_firebase_f1440d22();
-    init_dist();
+    init_dist2();
     init_dist3();
     import_bad_words = __toESM(require_badwords(), 1);
-    init_dist2();
+    init_dist();
     Chat_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       const q = query(collection(db, "messages"));
       const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -38963,8 +38963,8 @@ var entry4, js4, css4;
 var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_chat_svelte();
-    entry4 = "pages/chat.svelte-73331b84.js";
-    js4 = ["pages/chat.svelte-73331b84.js", "chunks/vendor-0af294cd.js", "chunks/firebase-3ad6a565.js", "chunks/singletons-d1fb5791.js"];
+    entry4 = "pages/chat.svelte-d03d62f1.js";
+    js4 = ["pages/chat.svelte-d03d62f1.js", "chunks/vendor-f0aad510.js", "chunks/navigation-416f1912.js", "chunks/singletons-d1fb5791.js"];
     css4 = [];
   }
 });
@@ -41034,7 +41034,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-e5be25f7.js", "js": ["start-e5be25f7.js", "chunks/vendor-0af294cd.js", "chunks/singletons-d1fb5791.js"], "css": [] },
+    entry: { "file": "start-f34bf549.js", "js": ["start-f34bf549.js", "chunks/vendor-f0aad510.js", "chunks/singletons-d1fb5791.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

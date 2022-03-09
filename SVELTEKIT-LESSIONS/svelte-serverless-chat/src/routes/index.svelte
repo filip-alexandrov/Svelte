@@ -1,3 +1,17 @@
+<script context="module">
+	import { browser } from '$app/env';
+	import { onAuthStateChanged } from 'firebase/auth';
+	import { auth } from '$lib/services/firebase';
+	if (browser) {
+		onAuthStateChanged(auth, (user) => {
+			if (user) {
+				const uid = user.uid;
+				goto('/chat');
+			}
+		});
+	}
+</script>
+
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import Auth from '$lib/components/Auth.svelte';
