@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-f34bf549.js",
+    "file": "start-bcdd7d7e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -33,24 +33,24 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-24463b12.js",
+    "file": "pages/index.svelte-9a280233.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-f0aad510.js",
-      "_navigation-416f1912.js",
+      "_firebase-347b01cd.js",
       "_singletons-d1fb5791.js"
     ]
   },
   "src/routes/chat.svelte": {
-    "file": "pages/chat.svelte-d03d62f1.js",
+    "file": "pages/chat.svelte-74c51239.js",
     "src": "src/routes/chat.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-f0aad510.js",
-      "_navigation-416f1912.js",
+      "_firebase-347b01cd.js",
       "_singletons-d1fb5791.js"
     ]
   },
@@ -60,11 +60,11 @@
   "_singletons-d1fb5791.js": {
     "file": "chunks/singletons-d1fb5791.js"
   },
-  "_navigation-416f1912.js": {
-    "file": "chunks/navigation-416f1912.js",
+  "_firebase-347b01cd.js": {
+    "file": "chunks/firebase-347b01cd.js",
     "imports": [
-      "_vendor-f0aad510.js",
-      "_singletons-d1fb5791.js"
+      "_singletons-d1fb5791.js",
+      "_vendor-f0aad510.js"
     ]
   }
 }

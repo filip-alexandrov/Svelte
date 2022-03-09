@@ -5417,7 +5417,7 @@ var init_install_fetch = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-047fd6a4.js
+// .svelte-kit/output/server/chunks/index-3b7f4571.js
 function run(fn) {
   return fn();
 }
@@ -5426,11 +5426,6 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
-}
-function custom_event(type, detail, bubbles = false) {
-  const e2 = document.createEvent("CustomEvent");
-  e2.initCustomEvent(type, bubbles, false, detail);
-  return e2;
 }
 function set_current_component(component) {
   current_component = component;
@@ -5442,18 +5437,6 @@ function get_current_component() {
 }
 function onDestroy(fn) {
   get_current_component().$$.on_destroy.push(fn);
-}
-function createEventDispatcher() {
-  const component = get_current_component();
-  return (type, detail) => {
-    const callbacks = component.$$.callbacks[type];
-    if (callbacks) {
-      const event = custom_event(type, detail);
-      callbacks.slice().forEach((fn) => {
-        fn.call(component, event);
-      });
-    }
-  };
 }
 function setContext(key2, context) {
   get_current_component().$$.context.set(key2, context);
@@ -5503,41 +5486,10 @@ function create_ssr_component(fn) {
     $$render
   };
 }
-function add_attribute(name5, value, boolean) {
-  if (value == null || boolean && !value)
-    return "";
-  return ` ${name5}${value === true && boolean_attributes.has(name5) ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
-}
-var current_component, boolean_attributes, escaped, missing_component, on_destroy;
-var init_index_047fd6a4 = __esm({
-  ".svelte-kit/output/server/chunks/index-047fd6a4.js"() {
+var current_component, escaped, missing_component, on_destroy;
+var init_index_3b7f4571 = __esm({
+  ".svelte-kit/output/server/chunks/index-3b7f4571.js"() {
     Promise.resolve();
-    boolean_attributes = /* @__PURE__ */ new Set([
-      "allowfullscreen",
-      "allowpaymentrequest",
-      "async",
-      "autofocus",
-      "autoplay",
-      "checked",
-      "controls",
-      "default",
-      "defer",
-      "disabled",
-      "formnovalidate",
-      "hidden",
-      "ismap",
-      "loop",
-      "multiple",
-      "muted",
-      "nomodule",
-      "novalidate",
-      "open",
-      "playsinline",
-      "readonly",
-      "required",
-      "reversed",
-      "selected"
-    ]);
     escaped = {
       '"': "&quot;",
       "'": "&#39;",
@@ -5559,7 +5511,7 @@ __export(layout_svelte_exports, {
 var Layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/layout.svelte.js"() {
-    init_index_047fd6a4();
+    init_index_3b7f4571();
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${slots.default ? slots.default({}) : ``}`;
     });
@@ -5596,7 +5548,7 @@ function load({ error: error2, status }) {
 var Error2;
 var init_error_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/error.svelte.js"() {
-    init_index_047fd6a4();
+    init_index_3b7f4571();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -38304,52 +38256,16 @@ var index_svelte_exports = {};
 __export(index_svelte_exports, {
   default: () => Routes
 });
-var Auth, Routes;
+var Routes;
 var init_index_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/index.svelte.js"() {
-    init_index_047fd6a4();
+    init_index_3b7f4571();
     init_firebase_f1440d22();
     init_dist2();
     init_dist();
     init_dist3();
-    Auth = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      createEventDispatcher();
-      new GoogleAuthProvider();
-      let email = "";
-      let password = "";
-      let cpassword = "";
-      let loginEmail = "yohandentzki@gmail.com";
-      let loginPassword = "000000";
-      let { authMode = "register" } = $$props;
-      if ($$props.authMode === void 0 && $$bindings.authMode && authMode !== void 0)
-        $$bindings.authMode(authMode);
-      return `<div class="${"w3-card-4"}" style="${"width: 40%; margin: 1rem auto"}">${`<div class="${"w3-container"}"><h2 class="${"w3-center"}">${escape(authMode === "login" ? "Login" : "Register")} to Serverless Chat</h2></div>
-		<div class="${"w3-container"}"><div class="${"w3-bar w3-center w3-border-bottom w3-border-gray w3-text-dark-gray"}"><button class="${"w3-bar-item w3-button w3-text-center " + escape(authMode === "login" && "w3-blue")}" style="${"width: 50%"}">LOGIN</button>
-				<button class="${"w3-bar-item w3-button w3-text-center " + escape(authMode === "register" && "w3-blue")}" style="${"width: 50%"}">REGISTER</button></div>
-			
-			${authMode === "login" ? `<form>${``}
-					<h4>Login</h4>
-					<p><label for="${"l-email"}">Email</label>
-						<input type="${"email"}" class="${"w3-input w3-border"}" placeholder="${"Enter your email"}" id="${"l-email"}"${add_attribute("value", loginEmail, 0)}></p>
-					<p><label for="${"l-password"}">Password</label>
-						<input type="${"password"}" class="${"w3-input w3-border"}" placeholder="${"Enter your password"}" id="${"l-password"}"${add_attribute("value", loginPassword, 0)}></p>
-					<p><button type="${"submit"}" class="${"w3-button w3-blue"}">Login</button></p></form>` : `<form>${``}
-					<h4>Register</h4>
-					<p><label for="${"r-email"}">Email</label>
-						<input type="${"email"}" class="${"w3-input w3-border"}" placeholder="${"Enter your email"}" id="${"r-email"}"${add_attribute("value", email, 0)}></p>
-					<p><label for="${"r-password"}">Password</label>
-						<input type="${"password"}" class="${"w3-input w3-border"}" placeholder="${"Enter a password"}" id="${"r-password"}"${add_attribute("value", password, 0)}></p>
-					<p><label for="${"r-cpassword"}">Confirm Password</label>
-						<input type="${"password"}" class="${"w3-input w3-border"}" placeholder="${"Re-enter that password"}" id="${"r-cpassword"}"${add_attribute("value", cpassword, 0)}></p>
-					<p><button type="${"submit"}" class="${"w3-button w3-blue"}">Register</button></p></form>`}
-			<hr>
-			<p><button class="${"w3-button w3-blue"}" style="${"width: 100%"}"><i class="${"fab fa-google"}"></i> Sign in with Google</button></p></div>`}</div>`;
-    });
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<h1 class="${"w3-jumbo w3-center"}">Serverless Chat</h1>
-<p class="${"w3-large w3-center"}">Please log in</p>
-
-${validate_component(Auth, "Auth").$$render($$result, {}, {}, {})}`;
+      return `${``}`;
     });
   }
 });
@@ -38366,8 +38282,8 @@ var entry3, js3, css3;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-24463b12.js";
-    js3 = ["pages/index.svelte-24463b12.js", "chunks/vendor-f0aad510.js", "chunks/navigation-416f1912.js", "chunks/singletons-d1fb5791.js"];
+    entry3 = "pages/index.svelte-9a280233.js";
+    js3 = ["pages/index.svelte-9a280233.js", "chunks/vendor-f0aad510.js", "chunks/firebase-347b01cd.js", "chunks/singletons-d1fb5791.js"];
     css3 = [];
   }
 });
@@ -38916,7 +38832,7 @@ __export(chat_svelte_exports, {
 var import_bad_words, Chat_1;
 var init_chat_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/chat.svelte.js"() {
-    init_index_047fd6a4();
+    init_index_3b7f4571();
     init_firebase_f1440d22();
     init_dist2();
     init_dist3();
@@ -38963,8 +38879,8 @@ var entry4, js4, css4;
 var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_chat_svelte();
-    entry4 = "pages/chat.svelte-d03d62f1.js";
-    js4 = ["pages/chat.svelte-d03d62f1.js", "chunks/vendor-f0aad510.js", "chunks/navigation-416f1912.js", "chunks/singletons-d1fb5791.js"];
+    entry4 = "pages/chat.svelte-74c51239.js";
+    js4 = ["pages/chat.svelte-74c51239.js", "chunks/vendor-f0aad510.js", "chunks/firebase-347b01cd.js", "chunks/singletons-d1fb5791.js"];
     css4 = [];
   }
 });
@@ -39051,7 +38967,7 @@ async function setResponse(res, response) {
 }
 
 // .svelte-kit/output/server/index.js
-init_index_047fd6a4();
+init_index_3b7f4571();
 var __accessCheck2 = (obj, member, msg) => {
   if (!member.has(obj))
     throw TypeError("Cannot " + msg);
@@ -41034,7 +40950,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png"]),
   _: {
     mime: { ".png": "image/png" },
-    entry: { "file": "start-f34bf549.js", "js": ["start-f34bf549.js", "chunks/vendor-f0aad510.js", "chunks/singletons-d1fb5791.js"], "css": [] },
+    entry: { "file": "start-bcdd7d7e.js", "js": ["start-bcdd7d7e.js", "chunks/vendor-f0aad510.js", "chunks/singletons-d1fb5791.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
